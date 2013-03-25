@@ -29,8 +29,12 @@ a:hover
 <body>
 	<div>
 		
-		<a href='<?php echo site_url('examples/clients')?>'>Clients</a> |	
-                <a href='<?php echo site_url('examples/schedule')?>'>Schedule</a> >
+		<a href='<?php echo site_url('examples/clients_management')?>'>Clients</a> |
+                <a href='<?php echo site_url('examples/schedule')?>'>Schedule</a> >|
+                <a href='<?php echo site_url('examples/user_management')?>'>Users</a> |	
+                <a href='<?php echo site_url('examples/user_groups')?>'>User groups</a> 
+            
+                
 	</div>
 	<div style='height:20px;'></div>  
     <div>

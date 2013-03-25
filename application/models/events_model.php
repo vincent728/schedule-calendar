@@ -94,10 +94,10 @@ class Events_model extends CI_Model {
           $client=$value['clientname'];
           
           if(isset($dataVal[$daytocheck])){
-            $dataVal[$daytocheck].='<div  class="content">'.$client.  nbs(6). anchor_popup('calendar/clientsInfos/'.$value['clients'],$title=img(array('src'=>'icons/accept.png'))).'</div>';
+            $dataVal[$daytocheck].='<div  class="content">'.$client.  nbs(6). anchor_popup('calendar/clientsInfos/'.$value['clients'],$title=img(array('src'=>'icons/alarm.png','title'=>'read more'))).'</div>';
           } else{
-            $dataVal[$daytocheck]='<div  class="content">'. anchor('calendar/loaddayschedule/'.$year.'-'.$month.'-'.$daytocheck,$title='view').'</div>';
-            $dataVal[$daytocheck].='<div  class="content">'.$client.  nbs(6). anchor_popup('calendar/clientsInfos/'.$value['clients'],$title=img(array('src'=>'icons/accept.png'))).'</div>';
+            $dataVal[$daytocheck]='<div  class="content">'.'view all'.nbs(6). anchor('calendar/loaddayschedule/'.$year.'-'.$month.'-'.$daytocheck,$title=img(array('src'=>'icons/view.png'))).'</div>';
+            $dataVal[$daytocheck].='<div  class="content">'.$client.  nbs(6). anchor_popup('calendar/clientsInfos/'.$value['clients'],$title=img(array('src'=>'icons/alarm.png','title'=>'read more'))).'</div>';
           }
           
           
