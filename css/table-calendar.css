@@ -1,0 +1,63 @@
+/* 
+    Document   : table-calendar
+    Created on : Mar 22, 2013, 9:48:11 AM
+    Author     : vincent
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+table.table-calendar{
+    
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+table.table-calendar tr.days td{
+    
+    width: 250px;
+/*    height:250px;*/
+    padding:4px;
+  /*    border:1px solid #BF4833;*/
+    border: 1px solid #19c1f5;
+    vertical-align: top;
+    background-color:#fff;
+    
+}
+table.table-calendar tr.days td:hover{
+    
+    background-color:#f6d7ec;
+    border:1px solid #f627b4;
+}
+table.table-calendar tr.days td div.content{
+    font-family: "kristen itc";
+    font-size: 14px;
+    vertical-align:top;
+    color: #4ab348;
+    text-transform: lowercase;
+/*    border: 1px solid #3880c3;*/
+    margin-top:5px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #fff;
+}
+table.table-calendar tr.heading{
+    height: 40px;
+    border:1px solid #19c1f5;
+    color:#4ab348;
+    font-family: kristen itc;
+    font-size: 14px;
+}
+table.table-calendar tr.daysoftheweek{
+    margin:20px;
+    color:#f627b4;
+    font-family: kristen itc;
+    font-size: 14px;
+    height: 45px;
+}
+.highlight{
+    color: #480091;
+    font-size:38px;
+}
+
