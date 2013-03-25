@@ -31,7 +31,7 @@ a:hover
 		
 		<a href='<?php echo site_url('examples/clients_management')?>'>Clients</a> |
                 <a href='<?php echo site_url('examples/schedule')?>'>Schedule</a> >|
-                <a href='<?php echo site_url('examples/user_management')?>'>Users</a> |	
+<!--                <a href='<?php echo site_url('examples/user_management')?>'>Users</a> |	-->
                 <a href='<?php echo site_url('examples/user_groups')?>'>User groups</a> 
             
                 

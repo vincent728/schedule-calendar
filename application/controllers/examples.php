@@ -38,7 +38,8 @@ class Examples extends CI_Controller {
         $crud->set_subject('Client');
 
         $crud->required_fields('phone_one');
-        
+        //$crud->set_relation_n_n('Namba','clients','phonebook','clients','clients_id','phone#','clientname');
+   // $crud->set_relation_n_n($field_name, $relation_table, $selection_table, $primary_key_alias_to_this_table, $primary_key_alias_to_selection_table, $title_field_selection_table);
         $crud->required_fields('directions');
         $crud->display_as('phone_one','phone number one')->display_as('phone_two','Altenate phone number')->display_as('clientname','Client');
         $crud->unset_texteditor('directions');
