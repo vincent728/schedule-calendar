@@ -20,11 +20,11 @@ table.table-calendar tr.days td{
     padding:4px;
   
   font-size: 15px;
-/*    border: 1px solid #19c1f5;*/
-    border: 2px solid #ffffff;
+    border: 1px solid #19c1f5;
+/*    border:2px solid #fff;*/
     vertical-align: top;
-/*    background-color:#fff;*/
-    background-color:#19c1f5;
+    background-color:#fff;
+/*    background-color:#19c1f5;*/
 }
 table.table-calendar tr.days td:hover{
     
