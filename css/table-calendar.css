@@ -20,15 +20,18 @@ table.table-calendar tr.days td{
     padding:4px;
   
   font-size: 15px;
-    border: 1px solid #19c1f5;
+/*    border: 1px solid #19c1f5;*/
+    border: 2px solid #ffffff;
     vertical-align: top;
-    background-color:#fff;
-    
+/*    background-color:#fff;*/
+    background-color:#19c1f5;
 }
 table.table-calendar tr.days td:hover{
     
-    background-color:#f6d7ec;
-    border:1px solid #f627b4;
+/*    background-color:#f6d7ec;*/
+     background-color: #f627b4;
+    border: 1px solid #ffffff;
+/*    border:1px solid #f627b4;*/
 }
 table.table-calendar tr.days td div.content{
      font-family: 'Droid Sans',Arial,sans-serif !important; 
@@ -50,11 +53,12 @@ table.table-calendar tr.heading{
     color:#4ab348;
      font-family: 'Droid Sans',Arial,sans-serif !important; 
     font-size: 17px;
+    background-color:#ffffff;
 }
 table.table-calendar tr.daysoftheweek{
     margin:20px;
-    color:#d5085a;
-/*    color: #f6652d;*/
+/*    color:#d5085a;*/
+     color:#ffffff;
   
      font-family: 'Droid Sans',Arial,sans-serif !important; 
     font-size: 18px;

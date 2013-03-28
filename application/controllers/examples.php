@@ -10,9 +10,31 @@ class Examples extends CI_Controller {
 
         $this->load->database();
         $this->load->helper('url');
+        $this->load->library('grocery_CRUD'); 
+        
+        
+        $this->load->library('ion_auth');
+		$this->load->library('session');
+		$this->load->library('form_validation');
+		$this->load->helper('url');
 
-        $this->load->library('grocery_CRUD');
+		// Load MongoDB library instead of native db driver if required
+		$this->config->item('use_mongodb', 'ion_auth') ?
+		$this->load->library('mongo_db') :
+
+		$this->load->database();
+
+		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
+
+		$this->lang->load('auth');
+		$this->load->helper('language');
+   
+        //secure the login
+//        if($this->ion_auth->is_admin()==FALSE){
+//            redirect('auth/login');  
+//        }
     }
+    
 
     function _example_output($output = null) {
         $this->load->view('example.php', $output);

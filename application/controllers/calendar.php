@@ -3,11 +3,9 @@
 class Calendar extends CI_Controller {
 
     public function index() {
-
-
+     $this->caldisplay($year=NULL, $month=NULL);
     }
-    
-    
+       
     /**calendar loader*/
     public function caldisplay($year=NULL,$month=NULL) {
               /*setting preference/configurations for the calendar */
