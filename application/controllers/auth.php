@@ -28,15 +28,24 @@ class Auth extends CI_Controller {
 
 	if($this->ion_auth->logged_in()&&$this->ion_auth->is_admin()){
             //set the flash data error message if there is one
-		 redirect('examples/index');
-            
-        }elseif($this->ion_auth->logged_in()&& $this->ion_auth->is_normaluser()){
-            redirect('examples/index');
+	$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+
+			//list the users
+			$this->data['users'] = $this->ion_auth->users()->result();
+			foreach ($this->data['users'] as $k => $user)
+			{
+				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
+			}
+
+		  //$this->_render_page('auth/index', $this->data);
+                  redirect('examples/index');
+                  
+                      
+        }else{
+            redirect('/', 'refresh');
         }
-            
-            
-            
-            
+     
+              
             
             
             

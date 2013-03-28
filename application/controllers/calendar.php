@@ -2,6 +2,14 @@
 
 class Calendar extends CI_Controller {
 
+    
+    public function __construct() {
+        parent::__construct();
+      
+    }
+
+    
+
     public function index() {
 
         $this->caldisplay($year = NULL, $month = NULL);
@@ -33,7 +41,8 @@ class Calendar extends CI_Controller {
         $data['day'] = $this->uri->segment(3);
         $this->load->view('dayschedule', $data);
     }
-
+    
+  
 }
 
 ?>

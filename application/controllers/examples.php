@@ -9,12 +9,7 @@ class Examples extends CI_Controller {
         parent::__construct();
 
         $this->load->database();
-        $this->load->helper('url');
-        $this->load->library('grocery_CRUD'); 
-        $this->load->library('ion_auth');
-        
-        
-        //secure the login
+            //secure the login
         if($this->ion_auth->is_admin()==FALSE){
             redirect('auth/login');  
         }
