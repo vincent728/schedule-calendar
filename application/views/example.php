@@ -36,9 +36,11 @@ a:hover
                 if($this->ion_auth->is_admin()==TRUE){
                 ?>
                  <a href='<?php echo site_url('examples/clients_management')?>'>Clients</a> |
-                <a href='<?php echo site_url('examples/schedule')?>'>Schedule</a> >|
-                <a href='<?php echo site_url('examples/user_groups')?>'>User groups</a> |
-                <a href='<?php echo site_url('auth/create_user')?>'>Create users</a> |
+                <a href='<?php echo site_url('examples/schedule')?>'>Schedule</a> |
+<!--                <a href='<?php echo site_url('examples/user_groups')?>'>User groups</a> |
+                <a href='<?php echo site_url('auth/create_user')?>'>Create users</a> |-->
+<!--                <a href='<?php echo site_url('examples/user_management')?>'>system users</a> |--->
+                
                 <a href='<?php echo site_url('auth/logout')?>'>logout</a>      
             
                 <?php    

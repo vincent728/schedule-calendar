@@ -467,9 +467,9 @@ class Ion_auth
 	{
 		$this->ion_auth_model->trigger_events('is_normaluser');
 
-		$admin_group = $this->config->item('default_group', 'ion_auth');
+		$user_group = $this->config->item('default_group', 'ion_auth');
 
-		return $this->in_group($admin_group, $id);
+		return $this->in_group($user_group, $id);
 	}
 
 	/**

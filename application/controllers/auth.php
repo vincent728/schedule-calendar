@@ -26,32 +26,46 @@ class Auth extends CI_Controller {
 	function index()
 	{
 
-		if (!$this->ion_auth->logged_in())
-		{
-			//redirect them to the login page
-			redirect('auth/login', 'refresh');
-		}
-		elseif (!$this->ion_auth->is_admin())
-		{
-			//redirect them to the home page because they must be an administrator to view this
-			redirect('/', 'refresh');
-		}
-		else
-		{
-			//set the flash data error message if there is one
-			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
-
-			//list the users
-			$this->data['users'] = $this->ion_auth->users()->result();
-			foreach ($this->data['users'] as $k => $user)
-			{
-				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
-			}
-
-		  $this->_render_page('auth/index', $this->data);
-                
-                      // redirect('examples/index');
-		}
+	if($this->ion_auth->logged_in()&&$this->ion_auth->is_admin()){
+            //set the flash data error message if there is one
+		 redirect('examples/index');
+            
+        }elseif($this->ion_auth->logged_in()&& $this->ion_auth->is_normaluser()){
+            redirect('examples/index');
+        }
+            
+            
+            
+            
+            
+            
+            
+//            if (!$this->ion_auth->logged_in())
+//		{
+//			//redirect them to the login page
+//			redirect('auth/login', 'refresh');
+//		}
+//		elseif (!$this->ion_auth->is_admin())
+//		{
+//			//redirect them to the home page because they must be an administrator to view this
+//			redirect('/', 'refresh');
+//		}
+//		else
+//		{
+//			//set the flash data error message if there is one
+//			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+//
+//			//list the users
+//			$this->data['users'] = $this->ion_auth->users()->result();
+//			foreach ($this->data['users'] as $k => $user)
+//			{
+//				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
+//			}
+//
+//		  $this->_render_page('auth/index', $this->data);
+//                
+//                      // redirect('examples/index');
+//		}
 	}
 
 	//log the user in
