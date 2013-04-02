@@ -9,7 +9,7 @@ $this->load->view('contents');
 <div id="infoMessage"><?php echo $message;?></div>
 
 <table class="mytable">
-	<tr>
+	<tr class="">
 		<th><?php echo lang('index_fname_th');?></th>
 		<th><?php echo lang('index_lname_th');?></th>
 		<th><?php echo lang('index_email_th');?></th>
@@ -28,12 +28,16 @@ $this->load->view('contents');
                 <?php endforeach?>
 			</td>
 			<td><?php echo ($user->active) ? anchor("auth/deactivate/".$user->id, lang('index_active_link')) : anchor("auth/activate/". $user->id, lang('index_inactive_link'));?></td>
-			<td><?php echo anchor("auth/edit_user/".$user->id, 'Edit') ;?></td>
+			<td><?php echo anchor("auth/edit_user/".$user->id, $attrib=img(array('src'=>'icons/edit.png','title'=>'edit'))) ;?></td>
 		</tr>
 	<?php endforeach;?>
 </table>
 
-<p><?php echo anchor('auth/create_user', lang('index_create_user_link'))?> | <?php echo anchor('auth/create_group', lang('index_create_group_link'))?></p>
+<p><?php echo anchor('auth/create_user', lang('index_create_user_link'))?> | <?php echo anchor('auth/create_group', lang('index_create_group_link'))?>|
+   <?php if($this->ion_auth->logged_in()==TRUE && $this->ion_auth->in_group($group=1)){
+       echo anchor('auth/logout', lang('index_logout'));
+   }?>
+</p>
 <?php
 $this->load->view('footer'); 
 ?>

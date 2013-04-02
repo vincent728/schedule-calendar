@@ -82,7 +82,7 @@ $config['max_rounds']     = 9;
  | appropriately. If this variable set to 0, there is no maximum.
  */
 $config['site_title']                 = "Zoomtanzania.com";       // Site Title, example.com
-$config['admin_email']                = "info@zoomtanzania.com"; // Admin Email, admin@example.com
+$config['admin_email']                = "vincentdaudi@gmail.com"; // Admin Email, admin@example.com
 $config['default_group']              = 'members';           // Default group, use name
 $config['technical_group']             = 'technical'; 
 $config['admin_group']             = 'admin'; 

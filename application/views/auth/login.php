@@ -35,6 +35,6 @@ $this->load->view('contents');
 <?php echo form_fieldset_close(); ?>
 <?php echo form_close(); ?>
 
-<li><a href="forgot_password"><?php echo lang('login_forgot_password'); ?></a></li>
+<li><a href="index.php/auth/forgot_password"><?php echo lang('login_forgot_password'); ?></a></li>
 
 <?php $this->load->view('footer'); ?>

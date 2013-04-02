@@ -15,16 +15,13 @@ table.table-calendar{
 }
 table.table-calendar tr.days td{
     
-    /*width: 250px;*/
-/*    height:250px;*/
+
     padding:4px;
-  
-  font-size: 15px;
+    font-size: 15px;
     border: 1px solid #19c1f5;
-/*    border:2px solid #fff;*/
     vertical-align: top;
     background-color:#fff;
-/*    background-color:#19c1f5;*/
+
 }
 table.table-calendar tr.days td:hover{
     
@@ -114,26 +111,33 @@ table.myinnertable tr td:hover{
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
 }
-table.myinnertable tr td{
 
-}
 table.mytable{
     width: 100%;
     border-collapse: collapse;
     border:0px;
+    font-size: 14px;
     font-family: Arial,Helvetica,sans-serif;
 }
-table.mytable thead {
+table.mytable tr th {
     border:1px solid activecaption;
-}
-table.mytable thead tr th{
-    text-decoration: none;
-    background-color:#CEDBE9;
-}
-table.mytable tbody tr {
- 
-border:1px solid #4EA6EA;
-    
+    font-family: Arial,Helvetica,sans-serif;
+    margin-bottom: 20px;
+    color: #F51A15;
+    text-align:justify;
+}table.mytable tr:hover{
+    background: #4EA6EA;
+    border: 1px solid #4EA6EA;
+    color: #fff;
+}table.mytable tr td:hover a{color:#FFBD69;
+          background: #fff;}
+table.mytable tr td:hover{ color: #000; background: #fff;}
+
+table.mytable tr td{
+    font-size: 12px;
+    font-family: Arial,Helvetica,sans-serif;
+    border: 1px solid #4EA6EA;
+    text-indent: 15px;
 }
 
 
