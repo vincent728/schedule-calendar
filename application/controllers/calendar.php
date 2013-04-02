@@ -18,8 +18,19 @@ class Calendar extends CI_Controller {
     /*     * calendar loader */
 
     public function caldisplay($year = NULL, $month = NULL) {
+        
+        if(empty($year)){
+           $todaysyear=date('Y'); 
+        }else{
+           $todaysyear=$year; 
+        }
+        if(empty($month)){
+            $todaysmonth=  date('m');
+        }else{
+            $todaysmonth=$month;
+        }
         /* setting preference/configurations for the calendar */
-        $data['calendar_results'] = $this->events_model->todaysevents($year, $month);
+        $data['calendar_results'] = $this->events_model->todaysevents($todaysyear, $todaysmonth);
 
         //print_r($data['calendar_results']);
         $this->load->view('show_calendar', $data);
