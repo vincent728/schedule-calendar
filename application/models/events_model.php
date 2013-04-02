@@ -95,7 +95,7 @@ class Events_model extends CI_Model {
           
           
           if($this->ion_auth->logged_in()==TRUE){
-             $edit=  nbs(3). anchor('examples/events_management/'.$value['schedule_id'],$title=img(array('src'=>'icons/edit.png','title'=>'edit'))); 
+             $edit=  nbs(3). anchor('examples/events_management/edit/'.$value['schedule_id'],$title=img(array('src'=>'icons/edit.png','title'=>'edit'))); 
           }else{ $edit='';} 
           
           
