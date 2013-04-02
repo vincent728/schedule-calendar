@@ -33,23 +33,18 @@ a:hover
             
                <?php
                
-                if($this->ion_auth->is_admin()==TRUE){
+                if($this->ion_auth->logged_in()==TRUE &&$this->ion_auth->in_group($group=2)){
                 ?>
                  <a href='<?php echo site_url('examples/clients_management')?>'>Clients</a> |
-                <a href='<?php echo site_url('examples/schedule')?>'>Schedule</a> |
-<!--                <a href='<?php echo site_url('examples/user_groups')?>'>User groups</a> |
-                <a href='<?php echo site_url('auth/create_user')?>'>Create users</a> |-->
-<!--                <a href='<?php echo site_url('examples/user_management')?>'>system users</a> |--->
-                
-                <a href='<?php echo site_url('auth/logout')?>'>logout</a>      
-            
-                <?php    
-                }elseif($this->ion_auth->is_normaluser()==TRUE){
+                <a href='<?php echo site_url('examples/schedule')?>'>Schedule</a> |   
+                <a href='<?php echo site_url('auth/logout')?>'>logout</a>  |
+              <?php    
+                }if($this->ion_auth->logged_in()==TRUE &&$this->ion_auth->is_admin()==TRUE){
                 ?>
-                <a href='<?php echo site_url('examples/clients_management')?>'>Clients</a> |
-                <a href='<?php echo site_url('examples/schedule')?>'>Schedule</a> >|
-                <a href='<?php echo site_url('auth/logout')?>'>logout</a>  
-                <?php 
+                <a href='<?php echo site_url('auth/index')?>'>System users</a> |
+                
+                <a href='<?php echo site_url('examples/user_groups')?>'>User groups</a> 
+                 <?php 
                 }
                
                

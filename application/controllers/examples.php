@@ -10,7 +10,7 @@ class Examples extends CI_Controller {
 
         $this->load->database();
             //secure the login
-        if($this->ion_auth->is_admin()==FALSE){
+        if($this->ion_auth->logged_in()==FALSE){
             redirect('auth/login');  
         }
     }
