@@ -29,7 +29,7 @@ class Calendar extends CI_Controller {
 
     public function clientsInfos() {
 
-        $data['results'] = $this->events_model->clientsInfos($this->uri->segment(3),$this->uri->segment(4));
+        $data['results'] = $this->events_model->clientsInfos($this->uri->segment(3),$this->uri->segment(4),$this->uri->segment(5));
         $this->load->view('clientdetails', $data);
     }
 

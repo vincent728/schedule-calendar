@@ -94,10 +94,10 @@ class Events_model extends CI_Model {
           $client=$value['clientname'];
           
           if(isset($dataVal[$daytocheck])){
-            $dataVal[$daytocheck].='<div  class="content">'.$client.  nbs(6). anchor('calendar/clientsInfos/'.$value['clients'].'/'.$year.'-'.$month.'-'.$daytocheck,$title=img(array('src'=>'icons/alarm.png','title'=>'read more'))).'</div>';
+            $dataVal[$daytocheck].='<div  class="content">'.$client.  nbs(6). anchor('calendar/clientsInfos/'.$value['clients'].'/'.$year.'-'.$month.'-'.$daytocheck.'/'.$value['schedule_id'],$title=img(array('src'=>'icons/alarm.png','title'=>'read more'))).'</div>';
           } else{
             $dataVal[$daytocheck]='<div  class="content">'.'view all'.nbs(6). anchor('calendar/loaddayschedule/'.$year.'-'.$month.'-'.$daytocheck,$title=img(array('src'=>'icons/view.png'))).'</div>';
-            $dataVal[$daytocheck].='<div  class="content">'.$client.  nbs(6). anchor('calendar/clientsInfos/'.$value['clients'].'/'.$year.'-'.$month.'-'.$daytocheck,$title=img(array('src'=>'icons/alarm.png','title'=>'read more'))).'</div>';
+            $dataVal[$daytocheck].='<div  class="content">'.$client.  nbs(6). anchor('calendar/clientsInfos/'.$value['clients'].'/'.$year.'-'.$month.'-'.$daytocheck.'/'.$value['schedule_id'],$title=img(array('src'=>'icons/alarm.png','title'=>'read more'))).'</div>';
           }
           
           
@@ -147,9 +147,10 @@ class Events_model extends CI_Model {
      * @return  results
      * 
      */
-    public function clientsInfos($clientId ,$date) {
+    public function clientsInfos($clientId ,$date,$eventsid) {
         $sql="select * from clients,schedule where clients.clients='$clientId' and
                                 schedule.client_id=clients.clients and
+                                schedule.schedule_id='$eventsid' and
                                 schedule.date like '%" . date('Y-m-d', strtotime($date)) . "%' order by date desc
                
                ";

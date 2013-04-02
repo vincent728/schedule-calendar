@@ -28,7 +28,7 @@ if($results->num_rows()>0){
           $phone3='';
       }
      
-      if(!empty($rows['contact_person'])|| is_null($rows['contact_person'])){
+      if(!empty($rows['contact_person'])){
           $contactperson='<li>'.form_label('Contact Person').form_input(array('name'=>'','value'=>$rows['contact_person'],'readonly'=>'readonly')).'</li>';
       }else{
           $contactperson='';
@@ -40,6 +40,11 @@ if($results->num_rows()>0){
           $email='';
       }
       
+      if(!empty($rows['exceptional_directions'])|| is_null($rows['exceptional_directions'])){
+          $email='<li>'.form_label('Notes').form_textarea(array('name'=>'','value'=>$rows['exceptional_directions'],'readonly'=>'readonly')).'</li>';
+      }else{
+          $email='';
+      }
       $form_out.=$contactperson.$email.$phone1.$phone2.$phone3;
 
     } echo form_open('',array('name'=>'','class'=>'myform')).form_fieldset().
