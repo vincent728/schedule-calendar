@@ -3,7 +3,6 @@
 
 <strong> Client Name: </strong> <?php echo $result->clientname; ?><br />
 <strong>Phone Number #1: </strong> <?php echo $result->phone_one; ?><br />
-<strong>Preferred Time: </strong> <?php echo date('H:i',strtotime($result->date)); ?><br />
 
 <?php if ($result->phone_two != ''): ?>
     <strong>Phone Number #2: </strong> <?php echo $result->phone_two; ?><br />
