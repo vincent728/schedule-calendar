@@ -9,8 +9,8 @@
 <?php endif; ?> 
     
 <?php if ($result->exceptional_directions != ''): ?>
-    <strong>Directions: </strong><?php echo $result->exceptional_directions; ?><br /><br><br>
-<?php elseif ($result->directions != '' and $result->exceptional_directions == ''): ?>
+    <strong>Notes: </strong><?php echo $result->exceptional_directions; ?><br /><br><br>
+<?php elseif ($result->directions != ''): ?>
     <strong>Directions: </strong><?php echo $result->directions; ?><br /><br><br>
 <?php endif; ?> 
 
