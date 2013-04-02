@@ -12,7 +12,7 @@ class Calendar extends CI_Controller {
 
     public function index() {
 
-        $this->caldisplay($year = NULL, $month = NULL);
+        $this->caldisplay($year ='', $month ='');
     }
 
     /*     * calendar loader */
@@ -29,7 +29,7 @@ class Calendar extends CI_Controller {
 
     public function clientsInfos() {
 
-        $data['results'] = $this->events_model->clientsInfos($this->uri->segment(3));
+        $data['results'] = $this->events_model->clientsInfos($this->uri->segment(3),$this->uri->segment(4));
         $this->load->view('clientdetails', $data);
     }
 

@@ -24,26 +24,30 @@ class Examples extends CI_Controller {
         $this->_example_output((object) array('output' => '', 'js_files' => array(), 'css_files' => array()));
     }
 
-    function schedule() {
+    function events_management() {
         $crud = new grocery_CRUD();
+        $crud->set_table('schedule');
         $crud->set_relation('client_id', 'clients', 'clientname');
-        $crud->set_subject('Schedule');
-        $crud->display_as('client_id', 'Client Name');
+    
+        $crud->set_subject('Event');
+        $crud->fields('date','client_id','contact_person','email','phone_one','phone_two','phone_three','exceptional_directions');
+        $crud->display_as('client_id', 'Client')->display_as('date','Event date');
+        $crud->display_as('exceptional_directions', 'Notes');
         $crud->unset_texteditor('exceptional_directions');
         $output = $crud->render();
         $this->_example_output($output);
     }
+    
+ 
 
     function clients_management() {
         $crud = new grocery_CRUD();
         $crud->set_table('clients');
         $crud->set_subject('Client');
-
         $crud->required_fields('phone_one');
-        //$crud->set_relation_n_n('Namba','clients','phonebook','clients','clients_id','phone#','clientname');
-   // $crud->set_relation_n_n($field_name, $relation_table, $selection_table, $primary_key_alias_to_this_table, $primary_key_alias_to_selection_table, $title_field_selection_table);
         $crud->required_fields('directions');
-        $crud->display_as('phone_one','phone number one')->display_as('phone_two','Altenate phone number')->display_as('clientname','Client');
+        $crud->fields('clientname','directions');
+        $crud->display_as('clientname','Client')->display_as('phone_one','phone one')->display_as('phone_two',' phone two')->display_as('phone_three',' phone three');
         $crud->unset_texteditor('directions');
         $output = $crud->render();
         $this->_example_output($output);

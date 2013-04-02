@@ -17,7 +17,7 @@ table.table-calendar tr.days td{
     
 
     padding:4px;
-    font-size: 15px;
+    font-size: 28px;
     border: 1px solid #19c1f5;
     vertical-align: top;
     background-color:#fff;
@@ -27,6 +27,8 @@ table.table-calendar tr.days td:hover{
     
 /*    background-color:#f6d7ec;*/
      background-color: #f627b4;
+     color: #fff;
+     font-size: 28px;
     border: 1px solid #ffffff;
 /*    border:1px solid #f627b4;*/
 }
