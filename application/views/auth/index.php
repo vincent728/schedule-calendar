@@ -33,7 +33,7 @@ $this->load->view('contents');
 	<?php endforeach;?>
 </table>
 
-<p><?php echo anchor('auth/create_user', lang('index_create_user_link'))?> | <?php echo anchor('auth/create_group', lang('index_create_group_link'))?>|
+<p><?php echo anchor('auth/create_user', $attrib=img(array('src'=>'icons/add-user.png','title'=>lang('index_create_user_link'))))?> | <?php echo anchor('auth/create_group', $attrib=img(array('src'=>'icons/group.png','title'=>lang('index_create_group_link'))))?>|
    <?php if($this->ion_auth->logged_in()==TRUE && $this->ion_auth->in_group($group=1)){
        echo anchor('auth/logout', lang('index_logout'));
    }?>
