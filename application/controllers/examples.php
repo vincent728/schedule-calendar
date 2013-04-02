@@ -30,7 +30,7 @@ class Examples extends CI_Controller {
         $crud->set_relation('client_id', 'clients', 'clientname');
     
         $crud->set_subject('Event');
-        $crud->fields('date','client_id','contact_person','email','phone_one','phone_two','phone_three','exceptional_directions');
+        $crud->fields('date','client_id','exceptional_directions');
         $crud->display_as('client_id', 'Client')->display_as('date','Event date');
         $crud->display_as('exceptional_directions', 'Notes');
         $crud->unset_texteditor('exceptional_directions');
@@ -46,7 +46,7 @@ class Examples extends CI_Controller {
         $crud->set_subject('Client');
         $crud->required_fields('phone_one');
         $crud->required_fields('directions');
-        $crud->fields('clientname','directions');
+        $crud->fields('clientname','contact_person','email','phone_one','phone_two','phone_three','directions');
         $crud->display_as('clientname','Client')->display_as('phone_one','phone one')->display_as('phone_two',' phone two')->display_as('phone_three',' phone three');
         $crud->unset_texteditor('directions');
         $output = $crud->render();
