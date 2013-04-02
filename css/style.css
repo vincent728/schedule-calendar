@@ -11,8 +11,8 @@ body{
  .calendar {
     font-family: 'Droid Sans',Arial,sans-serif !important;
     width: 100%;
-    min-width: 960px;
     border-collapse: collapse;
+    margin: 10px;
 }
 
 .calendar tbody tr:first-child th {

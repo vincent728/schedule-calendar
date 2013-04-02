@@ -25,26 +25,12 @@ class Auth extends CI_Controller {
     //redirect if needed, otherwise display the user list
     function index() {
 
-
         //page redirection according to different levels
         //grou[ id #2 is for  members
-
-        if ($this->ion_auth->in_group($group = 2) && $this->ion_auth->logged_in()) {
-
-            //set the flash data error message if there is one
-            $this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
-
-            //list the users
-            $this->data['users'] = $this->ion_auth->users()->result();
-            foreach ($this->data['users'] as $k => $user) {
-                $this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
-            }
-
-            redirect('examples/index');
-        }
-
-
-        if ($this->ion_auth->logged_in() && $this->ion_auth->is_admin()) {
+//        
+         if ($this->ion_auth->logged_in()==TRUE && $this->ion_auth->in_group($group = 1)) {
+            
+               
             //set the flash data error message if there is one
             $this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
 
@@ -56,6 +42,22 @@ class Auth extends CI_Controller {
 
             $this->_render_page('auth/index', $this->data);
         }
+
+        if ($this->ion_auth->in_group($group = 2) && $this->ion_auth->logged_in()) {
+
+            //set the flash data error message if there is one
+            $this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+
+            //list the users
+            $this->data['users'] = $this->ion_auth->users()->result();
+            foreach ($this->data['users'] as $k => $user) {
+                $this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
+            }
+            redirect('examples/index');
+        }
+
+
+       
     
         if (!$this->ion_auth->logged_in()) {
             redirect('/', 'refresh');
