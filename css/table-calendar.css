@@ -51,12 +51,11 @@ table.table-calendar tr.heading{
 }
 table.table-calendar tr.daysoftheweek{
     margin:20px;
-/*    color:#d5085a;*/
-     color:#ffffff;
-  
-     font-family: 'Droid Sans',Arial,sans-serif !important; 
+     color: #f627b4;
+    font-family: 'Droid Sans',Arial,sans-serif !important; 
     font-size: 18px;
     height: 45px;
+    text-transform:capitalize;
 }
 .highlight{
 /*    color: #480091;*/
