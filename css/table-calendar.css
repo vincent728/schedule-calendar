@@ -20,13 +20,13 @@ table.table-calendar tr.days td{
     font-size: 28px;
     border: 1px solid #19c1f5;
     vertical-align: top;
-    background-color:#fff;
+    background-color:#fffff;
 
 }
 table.table-calendar tr.days td:hover{
     
-/*    background-color:#f6d7ec;*/
-     background-color: #f627b4;
+    background-color: #73BA5C;
+/*     background-color: #f627b4;*/
      color: #fff;
      font-size: 28px;
     border: 1px solid #ffffff;
@@ -34,24 +34,19 @@ table.table-calendar tr.days td:hover{
 }
 table.table-calendar tr.days td div.content{
      font-family: 'Droid Sans',Arial,sans-serif !important; 
-    font-size: 15px;
+    font-size: 12px;
     vertical-align:top;
-    color: #4ab348;
-
     text-transform: lowercase;
-/*    border: 1px solid #3880c3;*/
-    margin-top:5px;
-    margin-bottom: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
+    border: 1px solid #ffffff;
     background-color: #fff;
 }
 table.table-calendar tr.heading{
     height: 40px;
     border:1px solid #19c1f5;
-    color:#4ab348;
+/*    color:#4ab348;*/
+    color:  #3875d7;
      font-family: 'Droid Sans',Arial,sans-serif !important; 
-    font-size: 17px;
+    font-size: 23px;
     background-color:#ffffff;
 }
 table.table-calendar tr.daysoftheweek{
@@ -64,9 +59,13 @@ table.table-calendar tr.daysoftheweek{
     height: 45px;
 }
 .highlight{
-    color: #480091;
+/*    color: #480091;*/
+    color:#f627b4;
     font-size:48px;
     text-align: right;
+}
+.highlight :hover{
+    color: #000;
 }
 
 /* my innertable styling*/
@@ -141,5 +140,23 @@ table.mytable tr td{
     border: 1px solid #4EA6EA;
     text-indent: 15px;
 }
+table #celltable{
+    border-collapse: collapse;
+    border: 0px;
+    min-width: 80px;
+    margin: 10px;
+}
+table #celltable  tr{
+    height: 20px;
+}
+table #celltable tr td{
+     font-size: 12px;
+     font-family: Arial,Helvetica,sans-serif;
+     border: 1px solid #f627b4;
+     text-indent: 5px;
+     color: #000;
+     text-transform: capitalize;
+}
+table #celltable tr td:hover{ background:#049cdb; color: #ffffff; }
 
 

@@ -18,7 +18,8 @@ form.myform{
 }
 form.myform fieldset{
     border:1px solid #ffffff;  
-  }
+    margin-top: 10px;
+      }
 form.myform fieldset ul{
 
 }
@@ -31,19 +32,18 @@ form.myform fieldset ul li{
   }
   form.myform fieldset ul li select{
       width: 300px;
-      border:1px solid #19c1f5;
+      border:1px solid #000;
   }
 form.myform fieldset ul li label{
     width:180px;
     margin-left:5px;
-/*    margin-right: 20px;*/
-    font-family:inherit;
-    font-size: 13px;
+    font-family: 'Droid Sans',Arial,sans-serif !important; 
+    font-size: 15px;
     display: inline-block;
 }
 form.myform fieldset ul li input{
     width: 300px;
-    border:1px solid #19c1f5;
+    border:1px solid #000;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -55,7 +55,7 @@ form.myform fieldset ul li input{
 form.myform fieldset ul li select.events{
 
     width: 300px;
-    border:1px solid #19c1f5;
+    border:1px solid #000;
      margin-bottom:10px;
     margin-top: 10px;
     margin-right: 10px;
@@ -72,13 +72,15 @@ form.myform fieldset ul li textArea{
     margin-bottom:10px;
     margin-top: 10px;
     margin-right: 10px;
-    border:1px solid #19c1f5;
+    border:1px solid #000;
+     font-family: 'Droid Sans',Arial,sans-serif !important; 
+    font-size: 15px;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
 }
 form.myform fieldset ul li input.images{
-    border:1px solid #19c1f5;
+    border:1px solid #000;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -88,7 +90,7 @@ form.myform fieldset ul li input.images{
     }
 form.myform fieldset ul li input.submit{
     width: 300px;
-    border:1px solid #19c1f5;
+    border:1px solid #000;
     border-radius: 5px;
     margin-left: 80px;
      margin-bottom:10px;
@@ -132,7 +134,7 @@ form.myformcreator fieldset ul li select{
     
     width: 220px;
 /*    display: inline-block;*/
-    border: 1px solid  #19c1f5;
+    border: 1px solid  #000;
     margin-bottom: 5px;
     margin-top: 5px;
     margin-left:40px;
@@ -143,7 +145,7 @@ form.myformcreator fieldset ul li select{
     
     width: 220px;
     display: inline-block;
-    border: 1px solid  #19c1f5;
+    border: 1px solid  #000;
     margin-bottom: 5px;
     margin-top: 5px;
     margin-left:50px;
@@ -152,10 +154,10 @@ form.myformcreator fieldset ul li select{
    }
    
    form.myformcreator fieldset ul li select option{
-/*     border-bottom: 1px solid  #19c1f5;  */
+/*     border-bottom: 1px solid  #000;  */
    }
    form.myformcreator fieldset ul li ul fieldset{
-       border:1px solid #19c1f5;
+       border:1px solid #000;
    }
    form.myformcreator fieldset ul li ul fieldset li input.checkbox{
        border:1px solid #4EA6EA;
@@ -180,7 +182,7 @@ form.myformcreator fieldset ul li select{
    form.myformcreator fieldset ul  li textArea{
       
       width: 200px;
-      border: 1px solid #19c1f5;
+      border: 1px solid #000;
       border-radius: 5px;
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
@@ -198,7 +200,7 @@ form.myformcreator fieldset ul li select{
    }
    #container{
        margin: 0 auto;
-       width: 920px;
+/*       width: 920px;*/
    }
    form.myform ul li table.price{
        margin-left: 180px;

@@ -47,13 +47,15 @@ if($results->num_rows()>0){
       }
       $form_out.=$contactperson.$email.$phone1.$phone2.$phone3;
 
-    } echo form_open('',array('name'=>'','class'=>'myform')).form_fieldset().
+    } 
+       
+    echo form_open('',array('name'=>'','class'=>'myform')).form_fieldset('Event for'.date('l, d-m-Y',strtotime($rows['date']))).
             '<ul>'.
              '<li>'.
-             form_label('Client').form_input(array('name'=>'','value'=>$rows['clientname'],'readonly'=>'readonly')).'</li>'.
-             $form_out.
-            '<li>'. form_label('Directions').  form_textarea(array('name'=>'','value'=>$rows['directions'],'readonly'=>'readonly')).
+             form_label('Client Name').form_input(array('name'=>'','value'=>$rows['clientname'],'readonly'=>'readonly')).'</li>'.
+             '<li>'. form_label('Directions').  form_textarea(array('name'=>'','value'=>$rows['directions'],'readonly'=>'readonly')).
               '</li>'.
+             $form_out.
             '</ul>'.
             form_fieldset_close().
             form_close();
