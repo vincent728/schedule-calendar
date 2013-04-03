@@ -200,7 +200,7 @@ form.myformcreator fieldset ul li select{
    }
    #container{
        margin: 0 auto;
-/*       width: 920px;*/
+     width: 980px;
    }
    form.myform ul li table.price{
        margin-left: 180px;

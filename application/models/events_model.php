@@ -100,11 +100,11 @@ class Events_model extends CI_Model {
           
           if(isset($dataVal[$daytocheck])){
             
-              $dataVal[$daytocheck].='<div  class="content"><table id="celltable"  border=""><tr><td>'.$client.'</td><td>'. anchor('calendar/clientsInfos/'.$value['clients'].'/'.$year.'-'.$month.'-'.$daytocheck.'/'.$value['schedule_id'],$title=img(array('src'=>'icons/alarm.png','title'=>'read more'))).'</td>'.$edit.'</tr></table></div>';
+              $dataVal[$daytocheck].='<div  class="content"><table id="celltable"  border=""><tr><td>'.$client.'</td><td>'. anchor('calendar/clientsInfos/'.$value['clients'].'/'.$year.'-'.$month.'-'.$daytocheck.'/'.$value['schedule_id'],$title=img(array('src'=>'icons/alarm.png','title'=>'view event'))).'</td>'.$edit.'</tr></table></div>';
                        } else{
-            $dataVal[$daytocheck]='<div  class="content"><table id="celltable"  border=""><tr><td>'.'view all events'.'</td><td>'. anchor('calendar/loaddayschedule/'.$year.'-'.$month.'-'.$daytocheck,$title=img(array('src'=>'icons/view.png'))).'</td></tr></table></div>';
+            $dataVal[$daytocheck]='<div  class="content"><table id="celltable"  border=""><tr><td>'.'view all events'.'</td><td>'. anchor('calendar/loaddayschedule/'.$year.'-'.$month.'-'.$daytocheck,$title=img(array('src'=>'icons/view.png','title'=>'view all events'))).'</td></tr></table></div>';
             
-            $dataVal[$daytocheck].='<div  class="content"><table id="celltable"  border=""><tr><td>'.$client.'</td><td>'. anchor('calendar/clientsInfos/'.$value['clients'].'/'.$year.'-'.$month.'-'.$daytocheck.'/'.$value['schedule_id'],$title=img(array('src'=>'icons/alarm.png','title'=>'read more'))).'</td>'.$edit.'</tr></table></div>';
+            $dataVal[$daytocheck].='<div  class="content"><table id="celltable"  border=""><tr><td>'.$client.'</td><td>'. anchor('calendar/clientsInfos/'.$value['clients'].'/'.$year.'-'.$month.'-'.$daytocheck.'/'.$value['schedule_id'],$title=img(array('src'=>'icons/alarm.png','title'=>'view event'))).'</td>'.$edit.'</tr></table></div>';
               }
           
           
