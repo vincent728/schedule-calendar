@@ -50,7 +50,7 @@ if($results->num_rows()>0){
 
     } 
        
-    echo form_open('',array('name'=>'','class'=>'myform')).form_fieldset('Event for'.date('l, d-m-Y',strtotime($rows['date']))).
+    echo form_open('',array('name'=>'','class'=>'myform')).form_fieldset('Event for'.  nbs(3).date('l, d-m-Y',strtotime($rows['date']))).
             '<ul>'.
              '<li>'.
               form_label('Client Name').form_input(array('name'=>'','value'=>$rows['clientname'],'readonly'=>'readonly')).'</li>'.

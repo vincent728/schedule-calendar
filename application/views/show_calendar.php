@@ -9,6 +9,9 @@
      if($this->ion_auth->logged_in()){
       $this->load->view('menu'); 
    }
+   else{
+       echo 'login'.  nbs(3).anchor('auth/login/',$attrib=img(array('src'=>'icons/login.png','title'=>'login')));
+   }
     ?>  
 </div>
 
