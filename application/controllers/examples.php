@@ -34,8 +34,8 @@ class Examples extends CI_Controller {
         $crud->display_as('client_id', 'Client')->display_as('date','Event date');
         $crud->display_as('exceptional_directions', 'Notes');
         $crud->unset_texteditor('exceptional_directions');
-        $crud->required_fields('clientname');
-         $crud->required_fields('date');
+        $crud->required_fields('client_id','date');
+        
         $output = $crud->render();
         $this->_example_output($output);
     }
@@ -46,11 +46,11 @@ class Examples extends CI_Controller {
         $crud = new grocery_CRUD();
         $crud->set_table('clients');
         $crud->set_subject('Client');
-        $crud->required_fields('phone_one');
-        $crud->required_fields('clientname');
-        $crud->required_fields('directions');
+      
         $crud->fields('clientname','contact_person','email','phone_one','phone_two','phone_three','directions');
         $crud->display_as('clientname','Client')->display_as('phone_one','phone one')->display_as('phone_two',' phone two')->display_as('phone_three',' phone three');
+        $crud->required_fields('phone_one','clientname','directions');
+
         $crud->unset_texteditor('directions');
         $output = $crud->render();
         $this->_example_output($output);

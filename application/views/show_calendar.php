@@ -10,7 +10,7 @@
       $this->load->view('menu'); 
    }
    else{
-       echo 'login'.  nbs(3).anchor('auth/login/',$attrib=img(array('src'=>'icons/login.png','title'=>'login')));
+       echo 'login'.  nbs(3).anchor('auth/login/',$attrib=img(array('src'=>'icons/login_2.png','title'=>'login')));
    }
     ?>  
 </div>
