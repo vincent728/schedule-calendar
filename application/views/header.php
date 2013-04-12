@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
         
-	<title>Schedule calendar</title>
+	<title>Courier Scheduler</title>
         <base href ="<?php echo base_url(); ?>" />
         <link href="css/default.css" rel="stylesheet"/>
         <script type='text/javascript' src="js/jquery-1.7.1.min.js"></script>
